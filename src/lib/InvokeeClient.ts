@@ -26,7 +26,6 @@ class InvokeeClient {
 
     public listen() {
         const req = new invokeeMsg.ListenRequest();
-
         return this._client.listen(req);
     }
 
