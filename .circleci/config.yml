@@ -68,7 +68,7 @@ jobs:
       - run:
           name: Publish Docker image
           command: |
-            echo "$REPO_PASSWORD" | docker login docker.pkg.github -u "$REPO_USERNAME" --password-stdin
+            echo "$REPO_PASSWORD" | docker login -u "$REPO_USERNAME" --password-stdin
             docker push $IMAGE_NAME
 
 workflows:
