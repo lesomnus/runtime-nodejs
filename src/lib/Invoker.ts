@@ -9,9 +9,7 @@ class Invoker {
         try {
             task = require(trg);
         } catch (e) {
-            if (e.code === "MODULE_NOT_FOUND") {
-                throw new errors.NotFound(`Failed to load ${trg}`);
-            }
+            if (e.code === "MODULE_NOT_FOUND") { throw new errors.NotFound(`Failed to load ${trg}`); }
 
             throw e;
         }
