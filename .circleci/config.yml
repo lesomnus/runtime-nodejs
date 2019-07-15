@@ -90,7 +90,7 @@ workflows:
               only: master
       - publish:
           requires:
-            - build
+            - build-image
           filters:
             branches:
               only: master
